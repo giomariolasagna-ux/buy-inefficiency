@@ -1,0 +1,24 @@
+{
+  "spec_version": "0.1",
+  "basket_version": "basket-0.1.0-TBD",
+  "protocol_version": "protocol-0.1-TBD",
+  "system_under_test": {
+    "description": "DEMO ONLY — not an official observation",
+    "hardware": "unspecified",
+    "software": "unspecified"
+  },
+  "energy": {
+    "amount": 0,
+    "unit": "J",
+    "boundary": "demo",
+    "method": "none",
+    "modeled_estimate": true
+  },
+  "verification": {
+    "passed": false,
+    "details": "Placeholder example for schema shape only"
+  },
+  "timestamp_utc": "2026-09-24T00:00:00Z",
+  "official": false,
+  "notes": "Do not treat as a real measurement."
+}

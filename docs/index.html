@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Buy Inefficiency</title>
+  <meta name="description" content="A public index specification for computational energy efficiency. Index ≠ token." />
+  <link rel="icon" href="mark.png" />
+  <style>
+    :root {
+      --bg: #1a1a1a;
+      --fg: #f2f2f2;
+      --muted: #a3a3a3;
+      --accent: #b8f000;
+      --card: #242424;
+      --line: #333;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.55;
+    }
+    main { max-width: 720px; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
+    header { display: flex; gap: 1rem; align-items: center; margin-bottom: 2rem; }
+    header img { width: 72px; height: 72px; border-radius: 14px; }
+    h1 { font-size: 1.75rem; margin: 0 0 0.25rem; letter-spacing: -0.02em; }
+    .tag { color: var(--accent); font-size: 0.9rem; font-weight: 600; }
+    p { color: var(--fg); }
+    .muted { color: var(--muted); }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 1rem 1.1rem;
+      margin: 1.25rem 0;
+    }
+    ul { padding-left: 1.2rem; }
+    a { color: var(--accent); }
+    .links { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem; }
+    .links a {
+      display: inline-block;
+      padding: 0.55rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      text-decoration: none;
+      color: var(--fg);
+      background: #111;
+    }
+    .links a.primary { background: var(--accent); color: #111; border-color: var(--accent); font-weight: 600; }
+    footer { margin-top: 3rem; font-size: 0.85rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <img src="mark.png" alt="Buy Inefficiency mark" />
+      <div>
+        <div class="tag">Public index specification</div>
+        <h1>Buy Inefficiency</h1>
+      </div>
+    </header>
+
+    <p>
+      Measure computational progress as <strong>less energy for the same verified work</strong> —
+      not more FLOPS, not a vendor ranking, and not a cryptocurrency product.
+    </p>
+
+    <div class="card">
+      <p class="muted" style="margin-top:0"><strong style="color:var(--fg)">Index ≠ token.</strong>
+      Defining the measure does not create a tradable asset. Any economic exposure design would be a separate later phase.</p>
+    </div>
+
+    <p>The system uses a public basket of workloads. Inputs, required results, and verification are fixed.
+    The method is not. When new techniques finish the same basket with fewer joules, efficiency rises —
+    whoever built them.</p>
+
+    <ul>
+      <li>Versioned public specification</li>
+      <li>Forks allowed (each fork = a new index)</li>
+      <li>Legitimacy from transparency, reproducibility, adoption</li>
+    </ul>
+
+    <div class="links">
+      <a class="primary" href="https://github.com/giomariolasagna-ux/buy-inefficiency">GitHub repo</a>
+      <a href="https://github.com/giomariolasagna-ux/buy-inefficiency/blob/main/INDEX_SPEC_v0.1.md">Index Spec v0.1</a>
+      <a href="https://github.com/giomariolasagna-ux/buy-inefficiency/blob/main/PITCH.md">Pitch</a>
+      <a href="https://github.com/giomariolasagna-ux/buy-inefficiency/blob/main/BASKET_PROPOSALS.md">Basket proposals</a>
+      <a href="https://github.com/giomariolasagna-ux/buy-inefficiency/blob/main/SOCIAL.md">Social copy</a>
+    </div>
+
+    <footer>
+      CC BY 4.0 · Draft materials · No live official index series yet · No token
+    </footer>
+  </main>
+</body>
+</html>

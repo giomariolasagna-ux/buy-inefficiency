@@ -1,0 +1,45 @@
+name: Workload proposal
+description: Propose a candidate workload for a future basket
+title: "[workload] "
+labels: ["workload-proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Propose a workload for discussion. This does **not** automatically add it to a locked basket.
+  - type: input
+    id: name
+    attributes:
+      label: Workload name
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What is computed?
+    validations:
+      required: true
+  - type: textarea
+    id: io
+    attributes:
+      label: Inputs and required result
+    validations:
+      required: true
+  - type: textarea
+    id: verify
+    attributes:
+      label: Verification procedure
+    validations:
+      required: true
+  - type: textarea
+    id: why_energy
+    attributes:
+      label: Why energy (not only speed) matters here
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: Gaming risks / ambiguities
+      description: How could someone cheat the spirit of the measure?

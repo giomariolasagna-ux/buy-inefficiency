@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/giomariolasagna-ux/buy-inefficiency/schemas/measurement-run.schema.json",
+  "title": "BuyInefficiencyMeasurementRun",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "spec_version",
+    "basket_version",
+    "protocol_version",
+    "system_under_test",
+    "energy",
+    "verification",
+    "timestamp_utc"
+  ],
+  "properties": {
+    "spec_version": { "type": "string", "examples": ["0.1"] },
+    "basket_version": { "type": "string", "examples": ["basket-0.1.0-TBD"] },
+    "protocol_version": { "type": "string", "examples": ["protocol-0.1-TBD"] },
+    "system_under_test": {
+      "type": "object",
+      "required": ["description"],
+      "properties": {
+        "description": { "type": "string" },
+        "hardware": { "type": "string" },
+        "software": { "type": "string" }
+      }
+    },
+    "energy": {
+      "type": "object",
+      "required": ["amount", "unit", "boundary", "method"],
+      "properties": {
+        "amount": { "type": "number" },
+        "unit": { "type": "string", "enum": ["J", "Wh", "kWh"] },
+        "boundary": { "type": "string" },
+        "method": { "type": "string" },
+        "modeled_estimate": { "type": "boolean", "default": false }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "required": ["passed"],
+      "properties": {
+        "passed": { "type": "boolean" },
+        "details": { "type": "string" }
+      }
+    },
+    "wall_time_seconds": { "type": "number" },
+    "notes": { "type": "string" },
+    "timestamp_utc": { "type": "string", "format": "date-time" },
+    "official": {
+      "type": "boolean",
+      "description": "Must be false until a locked basket and protocol exist.",
+      "default": false
+    }
+  }
+}
