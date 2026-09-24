@@ -5,178 +5,179 @@
 **Date:** 2026-09-24  
 **License:** CC BY 4.0  
 
-**English abstract.** This document defines a public, versioned specification for an index of computational efficiency: the evolution of energy required to correctly complete a fixed basket of computational workloads, without prescribing the computational method. Forks create new indices and do not rewrite the original history. This specification does not define a token or any economic exposure mechanism.
+This document defines a public, versioned specification for an index of computational efficiency: the evolution of energy required to correctly complete a fixed basket of computational workloads, without prescribing the computational method. Forks create new indices and do not rewrite the original history. This specification does not define a token or any economic exposure mechanism.
 
 ---
 
 ## 1. Purpose
 
-Definire una specifica pubblica e versionata che permetta di:
+Define a public, versioned specification that makes it possible to:
 
-1. Dichiarare un **paniere** di lavori computazionali confrontabili.
-2. Misurare l’**energia** necessaria a completarli correttamente.
-3. Costruire una **serie temporale** dell’efficienza sul paniere, indipendente dalla tecnologia usata.
-4. Consentire **adozione** e **fork** senza autorità centrale.
+1. Declare a **basket** of comparable computational workloads.
+2. Measure the **energy** required to complete them correctly.
+3. Build a **time series** of efficiency on that basket, independent of the technology used.
+4. Allow **adoption** and **forks** without a central authority.
 
-Il progresso informatico, in questa specifica, non è solo aumento della potenza disponibile, ma anche riduzione delle risorse fisiche (in particolare energia) necessarie a ottenere gli stessi risultati verificabili.
+In this specification, progress in computing is not only an increase in available power, but also a reduction in the physical resources (especially energy) needed to obtain the same verifiable results.
 
 ## 2. Scope and non-goals
 
 ### In scope
 
-- Definizione di workload, paniere, verifica, confini di misura energetica.
-- Regole di versioning e di fork.
-- Requisiti di trasparenza e riproducibilità.
+- Definitions of workload, basket, verification, and energy measurement boundaries.
+- Versioning and fork rules.
+- Transparency and reproducibility requirements.
 
 ### Non-goals (v0.1)
 
-- Non definire un token, una tokenomics, un oracle on-chain, o un meccanismo di esposizione economica.
-- Non dichiarare una misura universale e definitiva dell’efficienza computazionale.
-- Non produrre ranking di aziende, prodotti o architetture come obiettivo primario.
-- Non fissare in v0.1 l’elenco concreto dei workload (TBD) né i dettagli di laboratorio (TBD).
+- Not defining a token, tokenomics, an on-chain oracle, or an economic exposure mechanism.
+- Not claiming a universal, final measure of computational efficiency.
+- Not producing vendor or architecture rankings as a primary goal.
+- Not fixing in v0.1 the concrete workload list (TBD) or full lab details (TBD).
 
 ## 3. Definitions
 
-| Termine | Definizione |
-|---------|-------------|
-| **Workload** | Un lavoro computazionale con input, risultato richiesto e condizioni di verifica specificati. Il metodo di soluzione non è prescritto. |
-| **Basket (paniere)** | Insieme versionato di workload che costituisce l’unità di misura dell’indice. |
-| **Verification** | Procedura che decide se un risultato è corretto rispetto alla specifica del workload. |
-| **Energy measurement boundary** | Confine fisico/logico entro cui si contabilizza l’energia associata all’esecuzione del paniere (TBD in dettaglio operativo). |
-| **Run** | Tentativo di completare (parte di) un paniere su un dato sistema, con log di energia e di verifica. |
-| **Efficiency observation** | Energia misurata (entro i confini dichiarati) per completare correttamente il paniere, o una sua parte dichiarata, in un run valido. |
-| **Index series** | Sequenza temporale di osservazioni (o aggregati) pubblicate per una specifica versione di paniere + protocollo. |
-| **Fork** | Nuova specifica derivata (paniere e/o protocollo modificati) che costituisce un **nuovo** indice, con propria serie storica. |
+| Term | Definition |
+|------|------------|
+| **Workload** | A computational job with specified inputs, required result, and verification conditions. The solution method is not prescribed. |
+| **Basket** | A versioned set of workloads that is the unit of measurement for the index. |
+| **Verification** | The procedure that decides whether a result is correct relative to the workload specification. |
+| **Energy measurement boundary** | The physical/logical boundary within which energy associated with running the basket is accounted for (operational detail TBD). |
+| **Run** | An attempt to complete (part of) a basket on a given system, with energy and verification logs. |
+| **Efficiency observation** | Measured energy (within declared boundaries) to correctly complete the basket, or a declared subset, in a valid run. |
+| **Index series** | A published time sequence of observations (or aggregates) for a given basket + protocol version. |
+| **Fork** | A derived specification (modified basket and/or protocol) that constitutes a **new** index with its own historical series. |
 
 ## 4. Basket requirements
 
-Un paniere conforme a questa specifica deve:
+A conforming basket must:
 
-1. Essere **pubblico** (testo e artefatti necessari disponibili).
-2. Elencare ciascun workload con:
-   - identificatore stabile;
-   - descrizione;
-   - input (o generatore di input) deterministico o campionato con semi dichiarati;
-   - formato e criterio del risultato richiesto;
-   - procedura di verifica;
-   - eventuali vincoli ambientali (TBD: temperatura, precisione numerica, ecc.).
-3. **Non** prescrivere l’algoritmo, l’hardware, o il paradigma di calcolo.
-4. Dichiarare se i workload sono aperti (input pubblici) o a “sfida” (input rivelati al momento della misura) — policy TBD per v0.1+.
-5. Essere identificato da una **versione** (es. `basket-0.1.0`).
+1. Be **public** (text and required artifacts available).
+2. List each workload with:
+   - a stable identifier;
+   - a description;
+   - inputs (or an input generator) that are deterministic or sampled with declared seeds;
+   - the required result format and criteria;
+   - a verification procedure;
+   - any environmental constraints (TBD: temperature, numeric precision, etc.).
+3. **Not** prescribe algorithm, hardware, or compute paradigm.
+4. Declare whether workloads are open (public inputs) or “challenge” style (inputs revealed at measurement time) — policy TBD for v0.1+.
+5. Be identified by a **version** (e.g. `basket-0.1.0`).
 
-### Basket v0.1 — contenuti
+### Basket v0.1 — contents
 
-**TBD.** L’elenco dei workload concreti non è ancora fissato. Verrà aggiunto in una revisione minore o in v0.2 senza rompere le regole di questa specifica strutturale, oppure tramite documento `BASKET_vX.md` collegato.
+**TBD.** The concrete workload list is not fixed yet. It will be added in a minor revision or in v0.2 without breaking these structural rules, or via a linked `BASKET_vX.md`.
 
 ## 5. Measurement protocol
 
-### 5.1 Principio
+### 5.1 Principle
 
-Ciò che conta per l’osservazione primaria è la **quantità di energia** necessaria a produrre **correttamente** i risultati del paniere, entro i confini di misura dichiarati.
+The primary observation is the **amount of energy** required to produce the basket results **correctly**, within the declared measurement boundaries.
 
-Non sono metriche primarie (da sole) di questa specifica:
+The following are **not** primary metrics of this specification by themselves:
 
-- numero di operazioni;
-- tipo di processore;
-- solo il tempo di wall-clock (può essere riportato come metadato).
+- operation counts;
+- processor type;
+- wall-clock time alone (may be reported as metadata).
 
-### 5.2 Passi di un run valido
+### 5.2 Steps of a valid run
 
-1. Dichiarare la **versione** di paniere e di protocollo.
-2. Dichiarare il **sistema sotto test** (descrizione libera: hardware, software, configurazione rilevante).
-3. Eseguire i workload **senza** violare i vincoli del paniere.
-4. Applicare la **verifica** a ogni workload richiesto.
-5. Registrare l’**energia** entro il measurement boundary dichiarato.
-6. Pubblicare i log necessari alla riproduzione o all’audit (formato TBD).
+1. Declare the **version** of basket and protocol.
+2. Declare the **system under test** (free-form description: hardware, software, relevant configuration).
+3. Execute the workloads **without** violating basket constraints.
+4. Apply **verification** to every required workload.
+5. Record **energy** within the declared measurement boundary.
+6. Publish the logs required for reproduction or audit (format TBD).
 
-Un run è **invalido** se la verifica fallisce su un workload obbligatorio, se i confini energetici non sono dichiarati, o se i log richiesti dalla versione del protocollo mancano.
+A run is **invalid** if verification fails on a required workload, energy boundaries are undeclared, or required logs for that protocol version are missing.
 
-### 5.3 Energy accounting (struttura; dettagli TBD)
+### 5.3 Energy accounting (structure; details TBD)
 
-Per ogni run valido si deve dichiarare almeno:
+For every valid run, declare at least:
 
-- unità energetica (raccomandato: joule / watt-ora — **TBD conferma**);
-- confini (es. solo package CPU/GPU, intera macchina, rack — **TBD**);
-- strumento o metodo di misura (powermeter, RAPL, PDU, stima modellata — **TBD**; le stime modellate vanno etichettate come tali);
-- intervallo temporale allineato all’esecuzione del paniere;
-- eventuali correzioni (idle subtraction, ecc. — **TBD policy**).
+- energy unit (recommended: joule / watt-hour — **TBD confirmation**);
+- boundaries (e.g. CPU/GPU package only, whole machine, rack — **TBD**);
+- instrument or method (powermeter, RAPL, PDU, modeled estimate — **TBD**; modeled estimates must be labeled as such);
+- time interval aligned with basket execution;
+- any corrections (idle subtraction, etc. — **TBD policy**).
 
-### 5.4 Aggregazione dell’indice (bozza)
+### 5.4 Index aggregation (draft)
 
-**TBD.** Possibili direzioni (non normative in v0.1):
+**TBD.** Possible directions (non-normative in v0.1):
 
-- energia totale del paniere nel tempo;
-- media ponderata su workload;
-- indice normalizzato a una baseline dichiarata (es. prima osservazione pubblica = 100).
+- total basket energy over time;
+- weighted average across workloads;
+- an index normalized to a declared baseline (e.g. first public observation = 100).
 
-La formula ufficiale sarà fissata quando esiste almeno un paniere concreto e una baseline riproducibile.
+The official formula will be fixed once at least one concrete basket and a reproducible baseline exist.
 
 ## 6. Versioning and forks
 
 ### 6.1 Versioning
 
-Questa specifica usa versioni semantiche a livello di documento (`v0.1`, `v0.2`, …).
+This specification uses document-level semantic versions (`v0.1`, `v0.2`, …).
 
-- Cambiamenti che alterano il significato delle osservazioni storiche richiedono una **nuova versione maggiore** del paniere/protocollo e, di fatto, una nuova serie.
-- Clarifications senza impatto sulle serie possono essere patch/documentazione.
+- Changes that alter the meaning of historical observations require a **new major** basket/protocol version and, in effect, a new series.
+- Clarifications with no series impact may be patches/documentation.
 
 ### 6.2 Forks
 
-Chiunque può pubblicare una specifica derivata (nuovo paniere, nuovi criteri, diverso ambito).
+Anyone may publish a derived specification (new basket, new criteria, different scope).
 
-Regole:
+Rules:
 
-1. Un fork **deve** dichiarare la specifica di origine e le differenze.
-2. Un fork costituisce un **nuovo indice** con **nuova** serie storica.
-3. Un fork **non** altera retroattivamente la serie dell’indice originale.
-4. La legittimità deriva da trasparenza, riproducibilità e adozione — non da un’autorità centrale.
+1. A fork **must** declare its parent specification and the differences.
+2. A fork is a **new** index with a **new** historical series.
+3. A fork **must not** rewrite the original index series retroactively.
+4. Legitimacy comes from transparency, reproducibility, and adoption — not from a central authority.
 
 ## 7. Reproducibility
 
-Per quanto praticabile, ogni osservazione pubblicata dovrebbe consentire a terzi di:
+As far as practical, every published observation should let third parties:
 
-- comprendere cosa è stato eseguito;
-- ripetere o auditare la verifica;
-- valutare i confini energetici.
+- understand what was executed;
+- repeat or audit verification;
+- assess the energy boundaries.
 
-Formati di log, hashing degli artefatti e checklist di audit: **TBD**.
+Log formats, artifact hashing, and audit checklists: **TBD**.
 
 ## 8. Governance / adoption (lightweight)
 
-Non esiste un’autorità che dichiari “questa è *la* efficienza computazionale”.
+There is no authority that declares “this is *the* computational efficiency.”
 
-- L’adozione di una specifica o di un paniere è volontaria.
-- Il coordinamento può avvenire via issue/PR su repository pubblici.
-- Conflitti di definizione si risolvono preferibilmente con **fork** chiari piuttosto che con riscritture silenziose della storia.
+- Adoption of a specification or basket is voluntary.
+- Coordination may happen via issues/PRs on public repositories.
+- Definition conflicts are preferably resolved with clear **forks** rather than silent rewrites of history.
 
 ## 9. Relationship to any future asset
 
-L’indice e un eventuale asset finanziario/crypto sono **oggetti distinti**.
+The index and any future financial/crypto asset are **distinct objects**.
 
-Questa specifica:
+This specification:
 
-- **non** crea un token;
-- **non** implica che un token esista o debba esistere;
-- **non** garantisce che un asset segua il valore dell’indice.
+- does **not** create a token;
+- does **not** imply that a token exists or must exist;
+- does **not** guarantee that an asset will track the index.
 
-Qualsiasi meccanismo di esposizione economica è una **fase separata** del progetto e richiederà un documento dedicato.
+Any economic exposure mechanism is a **separate project phase** and will need its own document.
 
 ## 10. Changelog
 
 ### v0.1 — 2026-09-24
 
-- Prima bozza pubblica della struttura: definizioni, requisiti di paniere, protocollo (con TBD), versioning/fork, riproducibilità, governance leggera.
-- Nessun paniere concreto; nessuna formula d’indice normativa; nessun asset.
+- First public structural draft: definitions, basket requirements, protocol (with TBD), versioning/forks, reproducibility, lightweight governance.
+- No concrete basket; no normative index formula; no asset.
+- Spec language: English only.
 
 ## 11. Open questions / future work
 
-1. Quali workload entrano nel primo paniere pubblico?
-2. Quali confini energetici sono abbastanza rigorosi e abbastanza praticabili?
-3. Come gestire input “sfida” vs input aperti?
-4. Come normalizzare osservazioni tra laboratori diversi?
-5. Quale formula d’indice adottare dopo la baseline?
-6. Se e come (fase successiva) un asset possa dare esposizione all’indice senza confondere i due oggetti.
+1. Which workloads enter the first public basket?
+2. Which energy boundaries are rigorous enough and practical enough?
+3. How to handle challenge inputs vs open inputs?
+4. How to normalize observations across different labs?
+5. Which index formula to adopt after a baseline?
+6. Whether and how (later phase) an asset could provide exposure to the index without conflating the two objects.
 
 ---
 
-Fine della specifica v0.1.
+End of specification v0.1.

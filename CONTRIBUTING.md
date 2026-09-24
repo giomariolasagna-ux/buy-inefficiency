@@ -1,23 +1,23 @@
 # Contributing
 
-Grazie per l’interesse. Questo repository è una specifica aperta, non un prodotto finanziario.
+Thanks for your interest. This repository is an open specification, not a financial product.
 
-## Come aiutare
+## How to help
 
-1. **Issue** — domande, ambiguità nella specifica, proposte di workload.
-2. **Proposte di workload** — apri una issue con:
-   - nome e descrizione;
-   - input / generatore;
-   - risultato atteso e verifica;
-   - perché appartiene a un indice di efficienza energetica (non solo “benchmark famoso”).
-3. **Fork del paniere** — se cambi ambito o criteri in modo sostanziale, pubblica un fork esplicito (nuovo indice) e indica la derivazione. Non riscrivere la storia dell’originale.
-4. **Pull request** — benvenute per chiarimenti di testo, correzione errori, e (quando esisterà) artefatti di paniere/protocollo. Cambi che alterano il significato delle osservazioni vanno discussi prima in una issue.
+1. **Issues** — questions, ambiguities in the spec, workload proposals.
+2. **Workload proposals** — open an issue with:
+   - name and description;
+   - inputs / input generator;
+   - expected result and verification;
+   - why it belongs in an *energy-efficiency* index (not only “a famous benchmark”).
+3. **Basket forks** — if you substantially change scope or criteria, publish an explicit fork (a new index) and state the derivation. Do not rewrite the original’s history.
+4. **Pull requests** — welcome for wording clarifications, typo fixes, and (once they exist) basket/protocol artifacts. Changes that alter the meaning of historical observations should be discussed in an issue first.
 
-## Cosa non chiedere in questo repo (per ora)
+## What not to ask for here (for now)
 
-- Deploy di token / fundraising / “listatemi su un DEX”.
-- Numeri di indice inventati o “prezzi” dell’efficienza.
+- Token deploy / fundraising / “list us on a DEX.”
+- Invented index numbers or “prices” of efficiency.
 
-## Licenza dei contributi
+## License of contributions
 
-Salvo diverso accordo, i contributi a questo repository sono accettati sotto CC BY 4.0 (vedi `LICENSE`).
+Unless otherwise agreed, contributions to this repository are accepted under CC BY 4.0 (see `LICENSE`).
