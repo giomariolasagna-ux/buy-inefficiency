@@ -34,7 +34,8 @@ When new techniques reduce the energy needed for the same basket, the index reco
 | [Basket proposals](./BASKET_PROPOSALS.md) | Candidates only |
 | [Measurement run schema](./schemas/measurement-run.schema.json) | Draft |
 | [Site](https://giomariolasagna-ux.github.io/buy-inefficiency/) | GitHub Pages |
-| Concrete locked basket | TBD |
+| [Basket 0.1.0](./basket-0.1.0/BASKET.md) | Locked (experiments) |
+| [Fedora lab procedure](./docs/lab/FEDORA_MEASUREMENT.md) | Draft |
 | Asset / exposure token | **Not started** |
 
 ## Documents

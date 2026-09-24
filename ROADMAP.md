@@ -11,8 +11,8 @@ Free / open phase first. Paid on-chain phases only if they make sense later.
 - [x] Workload proposal issue template
 - [x] Candidate basket proposals (not normative)
 - [ ] Community feedback on proposed workloads
-- [ ] Lock basket-0.1.0 contents
-- [ ] First reproducible energy measurement notes (lab procedure draft)
+- [x] Lock basket-0.1.0 contents
+- [x] First reproducible energy measurement notes (lab procedure draft)
 
 ## Next (still mostly free)
 

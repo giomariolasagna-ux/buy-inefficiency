@@ -1,0 +1,12 @@
+{
+  "n": 64,
+  "dtype": "ieee754_binary64_le",
+  "layout": "row_major",
+  "seed": 20260924,
+  "sha256": {
+    "A": "234b89bbf0360a37360f93998af6c26e2d647082138ea2b698da4c1a36ce47b8",
+    "B": "ff327f9c0bb0282045ab64335e1a82329328916f0b38239297ae50d64b1382c0",
+    "C_expected": "0905a9923e1584597dfab62f91c562aa72b22f4bc7a5b6f2e8f2ed100f7c2833"
+  },
+  "verify": "Compute C=A*B in exact rational arithmetic OR float64 with bit-identical match to C_expected.bin. Accept bit-identical SHA-256 of output matrix as C_expected."
+}

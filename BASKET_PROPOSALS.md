@@ -1,3 +1,5 @@
+> **Update:** Concrete workloads are now locked in [`basket-0.1.0/BASKET.md`](./basket-0.1.0/BASKET.md). This file remains for *future* candidates.
+
 # Basket proposals (candidates — not normative)
 
 These are **discussion starters** for a future `basket-0.1.0`. They are **not** locked into Index Spec v0.1.

@@ -66,7 +66,9 @@ A conforming basket must:
 
 ### Basket v0.1 — contents
 
-**TBD.** The concrete workload list is not fixed yet. It will be added in a minor revision or in v0.2 without breaking these structural rules, or via a linked `BASKET_vX.md`.
+Concrete locked basket: [`basket-0.1.0/BASKET.md`](./basket-0.1.0/BASKET.md) (BI-W1, BI-W2, BI-W3).
+
+Official index series still requires standardized energy boundaries; see lab procedure.
 
 ## 5. Measurement protocol
 
@@ -168,6 +170,11 @@ Any economic exposure mechanism is a **separate project phase** and will need it
 - First public structural draft: definitions, basket requirements, protocol (with TBD), versioning/forks, reproducibility, lightweight governance.
 - No concrete basket; no normative index formula; no asset.
 - Spec language: English only.
+
+### v0.1.1 notes — 2026-09-24
+
+- Basket 0.1.0 locked with three workloads + Fedora lab procedure draft.
+- Still no official live series; still no token.
 
 ## 11. Open questions / future work
 
